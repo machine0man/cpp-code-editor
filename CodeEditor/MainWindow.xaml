@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="CodeEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CodeEditor"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="C++ Code Editor (machineman)"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBox
+            x:Name="tb_code"
+            Width="443"
+            Margin="12,84,0,10"
+            HorizontalAlignment="Left"
+            AcceptsReturn="True"
+            AcceptsTab="True"
+            BorderBrush="#FF9A9A9A"
+            BorderThickness="2,2,2,2"
+            FontFamily="Verdana"
+            TextChanged="tb_code_TextChanged"
+            TextWrapping="Wrap" />
+        <TextBlock
+            Margin="10,48,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontFamily="Showcard Gothic"
+            FontWeight="Bold"
+            Text="C++ Code Editor"
+            TextWrapping="Wrap" />
+        <Button
+            Margin="140,45,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="OnBtnClicked_Compile"
+            Content="Compile" />
+        <Button
+            Margin="209,45,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="OnBtnClicked_Run"
+            Content="Run" />
+        <TextBlock
+            x:Name="lbl_logs"
+            Margin="480,84,10,10"
+            Background="#FFE6E6E6"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBlock
+            Margin="475,55,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontWeight="Bold"
+            Text="LOGS"
+            TextWrapping="Wrap" />
+
+    </Grid>
+</Window>
